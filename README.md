@@ -9,7 +9,7 @@
 
 Using a salary dataset from Kaggle containing records of various data science-related job types, experience level, employment type collected during 2020-2023, our database application will provide supplementary statistics aimed at professionals who are interested in using this data to explore the data science field as their career choice by getting insights into salary and thus professional growth. Our app is aimed at students interested in data-oriented fields and experienced professionals looking to make a career switch. Also, users such as hiring managers, recruiters and also startup founders can benefit from our app by getting a realistic salary.
 
-Our dataset was obtained from Kaggle (https://www.kaggle.com/datasets/arnabchaki/data-science-salaries-2023), and it includes 3755 data points and the following features:
+Our dataset was obtained from Kaggle (https://www.kaggle.com/datasets/arnabchaki/data-science-salaries-2023), and it includes 3755 data points and the following attributes:
 
 + work_year: The year the salary was paid.
 + experience_level: The experience level in the job during the year
