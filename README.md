@@ -3,7 +3,7 @@
 
 **Course Project for DSCI-D532: Applied Database Technologies**
 
-**Summer 2023 Term - Indiana University Bloomington**
+**Summer 2023 Term @ Indiana University Bloomington**
 
 **Group 8: Swapnali Gujar, Alexis Perez, Yeon Soo Chung**
 
