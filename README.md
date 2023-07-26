@@ -25,7 +25,7 @@ Our dataset was obtained from Kaggle (https://www.kaggle.com/datasets/arnabchaki
 
 This repository includes three sets of code, which roughly divides our project into three parts:
 
-1. Python code preprocessing the Kaggle dataset.
+1. Python code preprocessing the Kaggle dataset. We have included csv files of the original Kaggle dataset and the preprocessed dataset to this repository.
 2. MySQL Workbench script that loads data and creates our database.
 3. R code for our Shiny app, which is linked to our MySQL database.
 
@@ -37,5 +37,6 @@ Ultimately, we developed a Shiny app that includes the following features:
 + Users can input specific attribute values, and the app will output a visual of salary progression by plotting median salaries by experience level
 
 
-
+## Data Preprocessing
+The code file labelled "salaries_preprocess.py" 
 
