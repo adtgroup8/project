@@ -13,11 +13,11 @@ Our dataset was obtained from Kaggle (https://www.kaggle.com/datasets/arnabchaki
 
 + work_year: The year the salary was paid.
 + experience_level: The experience level in the job during the year.
-+ employment_type: The type of employment for the role.
++ employment_type: The type of employment for the role (e.g., full-time, part-time, etc.).
 + job_title: The role worked during the year.
 + salary: The total gross salary amount paid.
 + salary_currency: The currency of the salary paid as an ISO 4217 currency code.
-+ salaryinusd: The salary in USD.
++ salary_in_usd: The salary in USD.
 + employee_residence: Employee's primary country of residence during the work year as an ISO 3166 country code.
 + remote_ratio: The overall amount of work done remotely.
 + company_location: The country of the employer's main office or contracting branch.
