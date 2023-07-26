@@ -38,5 +38,5 @@ Ultimately, we developed a Shiny app that includes the following features:
 
 
 ## Data Preprocessing
-The code file labelled "salaries_preprocess.py" 
+The code file labelled "salaries_preprocessing.ipynb" 
 
