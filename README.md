@@ -73,6 +73,7 @@ Above is an image of the second tab, "Update Data", which is where the user can 
 
 ![app-tab3a](https://github.com/adtgroup8/project/assets/137223955/16944ac6-593a-416c-8e2c-d4bc0b227e85)
 Above is an image of the third tab, "Career Growth. Initially, the space where the plot is is empty, but once a user populates the fields in the side panel and clicks on "Whats My Worth!", a graph appears that plots the median salaries of jobs in the data table that meet the input critera. These are median salaries with respect to experience level, which provides the user with information on career progression. This tab also outputs filtered job titles based on user inputs. If you scroll down on this tab, there is a second table (imaged below) that outputs the filtered subset of the overall data table including all attributes.
+
 ![app-tab3b](https://github.com/adtgroup8/project/assets/137223955/65efb9c7-5e5a-4905-a8f5-7dfd7d4a240f)
 
 
