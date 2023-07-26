@@ -61,7 +61,11 @@ The last two queries extract the last row of the imported "salaries_preprocessed
 
 
 ## Shiny App Development
-The code file labelled "WhatsMyWorth_V4.R" is the R code for our WhatsMyWorth Shiny app. Our app connects to our database via a local server. 
+The code file labelled "WhatsMyWorth_V4.R" is the R code for our WhatsMyWorth Shiny app. Our app connects to the MySQL database via a local server.
+
+One can run the app by opening this file in RStudio. Our app contains three tabs, whose functionalities and operations are explained in our technical report. Below are some screenshots of WhatsMyWorth.
+
+
 
 
 
