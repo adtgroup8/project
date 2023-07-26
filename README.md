@@ -11,17 +11,17 @@ Using a salary dataset from Kaggle containing records of various data science-re
 
 Our dataset was obtained from Kaggle (https://www.kaggle.com/datasets/arnabchaki/data-science-salaries-2023), and it includes ~5000 data points and the following attributes:
 
-+ work_year: The year the salary was paid
-+ experience_level: The experience level in the job during the year
-+ employment_type: The type of employment for the role
-+ job_title: The role worked during the year
-+ salary: The total gross salary amount paid
-+ salary_currency: The currency of the salary paid as an ISO 4217 currency code
-+ salaryinusd: The salary in USD
-+ employee_residence: Employee's primary country of residence during the work year as an ISO 3166 country code
-+ remote_ratio: The overall amount of work done remotely
-+ company_location: The country of the employer's main office or contracting branch
-+ company_size: The median number of people that worked for the company during the year
++ work_year: The year the salary was paid.
++ experience_level: The experience level in the job during the year.
++ employment_type: The type of employment for the role.
++ job_title: The role worked during the year.
++ salary: The total gross salary amount paid.
++ salary_currency: The currency of the salary paid as an ISO 4217 currency code.
++ salaryinusd: The salary in USD.
++ employee_residence: Employee's primary country of residence during the work year as an ISO 3166 country code.
++ remote_ratio: The overall amount of work done remotely.
++ company_location: The country of the employer's main office or contracting branch.
++ company_size: The median number of people that worked for the company during the year.
 
 This repository includes three sets of code, which roughly divides our project into three parts:
 
@@ -31,12 +31,33 @@ This repository includes three sets of code, which roughly divides our project i
 
 Ultimately, we developed a Shiny app that includes the following features:
 
-+ Contains a data table of all preprocessed data
-+ Users can add rows to the database with their job and salary information
-+ Users can filter the database by certain attributes and view plots that visualize the data
-+ Users can input specific attribute values, and the app will output a visual of salary progression by plotting median salaries by experience level
++ Contains a data table of all preprocessed data.
++ Users can add rows to the database with their job and salary information.
++ Users can filter the database by certain attributes and view plots that visualize the data.
++ Users can input specific attribute values, and the app will output a visual of salary progression by plotting median salaries by experience level.
 
 
 ## Data Preprocessing
-The code file labelled "salaries_preprocessing.ipynb" 
+The code file labelled "salaries_preprocessing.ipynb" is our Google Colab notebook that applies the following changes to the original "salaries.csv" dataset.
+
++ Created a “job_field” attribute which assigns each job title to a broader field or category.
++ Created a "user_id" attribute as our primary key.
++ Created a “company_location_na” attribute which takes the value of “True” if a job is in North America (US or Canada); and “False” if it is elsewhere.
++ The “remote_ratio” attribute takes values of 0, 50, or 100. We replaced those with “Onsite”, “Hybrid”, and “Remote”, respectively; and we renamed the attribute to "employment_mode".
++ Include only one column for salary in USD.
++ Unabbreviated all abbreviated values, such as country code, experience level acronyms, etc.
+
+
+## MySQL Database
+The code file labelled 
+
+
+
+
+
+
+
+
+
+
 
