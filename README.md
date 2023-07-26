@@ -49,10 +49,19 @@ The code file labelled "salaries_preprocessing.ipynb" is our Google Colab notebo
 
 
 ## MySQL Database
-The code file labelled "proj-pt2-sql.sql" is our MySQL script. After creating the database in line 5, the "salaries_preprocessed.csv" dataset must be loaded into MySQL Workbench before running any subsequent code:
+The code file labelled "proj-pt2-sql.sql" is our MySQL script. After creating the database in line 5, the "salaries_preprocessed.csv" dataset must be loaded into MySQL Workbench by right-clicking on the database name in the side panel and selecting "Table Data Import Wizard" (see image below). This must be done before running any subsequent code.
 
 ![mysql-import-data](https://github.com/adtgroup8/project/assets/137223955/514f908e-9073-43f6-825a-1967227a5f3b)
 
+Lines 9-81 create the data tables that normalizes the imported dataset (please refer to the schema in our technical report).
+
+The rest of the script, except the last two queries, are various queries that we executed per the requirements for Part 2 of this project.
+
+The last two queries extract the last row of the imported "salaries_preprocessed" data table; and deletes the last row of the data table, respectively. They were written to confirm and delete the addition of new row(s) via the app.
+
+
+## Shiny App Development
+The code file labelled "WhatsMyWorth_V4.R" is the R code for our WhatsMyWorth Shiny app. Our app connects to our database via a local server. 
 
 
 
