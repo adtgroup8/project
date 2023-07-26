@@ -1,5 +1,5 @@
 # WhatsMyWorth App
-**An App That Provides Salary Insights Into Data-Related Jobs**
+## An App That Provides Salary Insights Into Data-Related Jobs**
 
 **Course Project for DSCI-D532: Applied Database Technologies**
 
