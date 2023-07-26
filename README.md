@@ -49,7 +49,10 @@ The code file labelled "salaries_preprocessing.ipynb" is our Google Colab notebo
 
 
 ## MySQL Database
-The code file labelled 
+The code file labelled "proj-pt2-sql.sql" is our MySQL script. After creating the database in line 5, the "salaries_preprocessed.csv" dataset must be loaded into MySQL Workbench before running any subsequent code:
+
+![mysql-import-data](https://github.com/adtgroup8/project/assets/137223955/514f908e-9073-43f6-825a-1967227a5f3b)
+
 
 
 
