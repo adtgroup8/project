@@ -7,7 +7,7 @@
 **Group 8: Swapnali Gujar, Alexis Perez, Yeon Soo Chung**
 
 ## Introduction
-Using a salary dataset from Kaggle containing records of various data science-related job types, experience level, employment type collected during 2020-2023, our database application will provide supplementary statistics aimed at professionals who are interested in using this data to explore the data science field as their career choice by getting insights into salary and thus professional growth. Our app is aimed at students interested in data-oriented fields and experienced professionals looking to make a career switch. Also, users such as hiring managers, recruiters and startup founders can benefit from our app by getting realistic salary expectations.
+Using a salary dataset from Kaggle containing records of various data science-related jobs, and related salary information, collected during 2020-2023, our database application will provide supplementary visualizations aimed at professionals who are interested in using this data to explore the data science field as their career choice by getting insights into salary and thus professional growth. Our app is aimed at students interested in data-oriented fields and experienced professionals looking to make a career switch. Also, users such as hiring managers, recruiters and startup founders can benefit from our app by getting realistic salary expectations.
 
 Our dataset was obtained from Kaggle (https://www.kaggle.com/datasets/arnabchaki/data-science-salaries-2023), and it includes ~5000 data points and the following attributes:
 
@@ -25,7 +25,7 @@ Our dataset was obtained from Kaggle (https://www.kaggle.com/datasets/arnabchaki
 
 This repository includes three sets of code, which roughly divides our project into three parts:
 
-1. Python code preprocessing the Kaggle dataset. We have included csv files of the original Kaggle dataset and the preprocessed dataset to this repository.
+1. Python code that preprocesses the Kaggle dataset. **We have included csv files of the original Kaggle dataset ("salaries.csv") and the preprocessed dataset ("salaries_preprocessed.csv") to this repository.**
 2. MySQL Workbench script that loads data and creates our database.
 3. R code for our Shiny app, which is linked to our MySQL database.
 
@@ -75,16 +75,3 @@ Above is an image of the second tab, "Update Data", which is where the user can 
 Above is an image of the third tab, "Career Growth. Initially, the space where the plot is is empty, but once a user populates the fields in the side panel and clicks on "Whats My Worth!", a graph appears that plots the median salaries of jobs in the data table that meet the input critera. These are median salaries with respect to experience level, which provides the user with information on career progression. This tab also outputs filtered job titles based on user inputs. If you scroll down on this tab, there is a second table (imaged below) that outputs the filtered subset of the overall data table including all attributes.
 
 ![app-tab3b](https://github.com/adtgroup8/project/assets/137223955/65efb9c7-5e5a-4905-a8f5-7dfd7d4a240f)
-
-
-
-
-
-
-
-
-
-
-
-
-
