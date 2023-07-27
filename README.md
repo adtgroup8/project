@@ -26,7 +26,7 @@ Our dataset was obtained from Kaggle (https://www.kaggle.com/datasets/arnabchaki
 This repository includes three sets of code, which roughly divides our project into three parts:
 
 1. Python code that preprocesses the Kaggle dataset. **We have included csv files of the original Kaggle dataset ("salaries.csv") and the preprocessed dataset ("salaries_preprocessed.csv") to this repository.**
-2. MySQL Workbench script that loads data and creates our database.
+2. MySQL Workbench script that creates our database, loads data, and creates tables for normalization.
 3. R code for our Shiny app, which is linked to our MySQL database.
 
 Ultimately, we developed a Shiny app that includes the following features:
@@ -40,9 +40,9 @@ Ultimately, we developed a Shiny app that includes the following features:
 ## Data Preprocessing
 The code file labelled "salaries_preprocessing.ipynb" is our Google Colab notebook that applies the following changes to the original "salaries.csv" dataset.
 
-+ Created a “job_field” attribute which assigns each job title to a broader field or category.
-+ Created a "user_id" attribute as our primary key.
-+ Created a “company_location_na” attribute which takes the value of “True” if a job is in North America (US or Canada); and “False” if it is elsewhere.
++ Creates a “job_field” attribute which assigns each job title to a broader field or category.
++ Creates a "user_id" attribute as our primary key.
++ Creates a “company_location_na” attribute which takes the value of “True” if a job is in North America (US or Canada); and “False” if it is elsewhere.
 + The “remote_ratio” attribute takes values of 0, 50, or 100. We replaced those with “Onsite”, “Hybrid”, and “Remote”, respectively; and we renamed the attribute to "employment_mode".
 + Include only one column for salary in USD.
 + Unabbreviated all abbreviated values, such as country code, experience level acronyms, etc.
@@ -55,9 +55,17 @@ The code file labelled "proj-pt2-sql.sql" is our MySQL script. After creating th
 
 Lines 9-81 create the data tables that normalizes the imported dataset (please refer to the schema in our technical report).
 
+If one hovers their cursor over the "salaries_preprocessed" table in the schema side bar, there will be three icons that appear to the right of the table name. Clicking on the wrench icon will open a window interface that enables the assignment of foreign keys in "salaries_preprocessed" table to the primary keys in the secondary normalization tables. To do this:
+
+1. In the "Columns" tab, select "user_id" as the primary key (PK), and select "NN" (Not Null) for every attribute. Also, for each attribute, enter the same data type as what was assigned when creating the secondary tables (e.g., VARCHAR(50) below).
+![mysql-1](https://github.com/adtgroup8/project/assets/137223955/6d8edfaa-b1a4-4bbc-adf7-d3afa86db77a)
+
+2. In the "Foreign Keys" tab, assign each foreign key to its reference table and reference column, like below.
+![mysql-2](https://github.com/adtgroup8/project/assets/137223955/285e3122-5ac2-44b1-886f-f7dcc69de525)
+
 The rest of the script, except the last two queries, are various queries that we executed per the requirements for Part 2 of this project.
 
-The last two queries extract the last row of the imported "salaries_preprocessed" data table; and deletes the last row of the data table, respectively. They were written to confirm and delete the addition of new row(s) via the app.
+The last two queries extract the last row of the overall "salaries_preprocessed" data table; and deletes the last row of the data table, respectively. They were written to confirm and to delete the addition of new row(s) via the app.
 
 
 ## Shiny App Development
@@ -69,9 +77,9 @@ One can run the app by opening this file in RStudio. Our app contains three tabs
 Above is an image of the first tab, "Salary Insights". The app filters the dataset per the user inputs on the left, and it outputs the text and visuals on the right. The text at the top lists the job titles that are filtered based on the selected job field. The first plot contains two box plots of salaries that compare jobs based in North America and those that are not. The second plot contain salary box plots based on company size. The third plot are scatter plots of salaries based on experience level. All plots take into account relevant user inputs (for example, the second plot would not consider the company size selected by the user).
 
 ![app-tab2](https://github.com/adtgroup8/project/assets/137223955/200318b6-6527-47de-abe2-64eae1328fd2)
-Above is an image of the second tab, "Update Data", which is where the user can add a row to the overall data table with their personal salary information. The user populates every field in the left side panel (a summary box at the bottom reviews what the user is about to enter), and then clicks on "Add Data" to update the data table. This update gets applied to the MySQL database. The user should reload the app for the plots in the other tabs to be updated with the new data.
+Above is an image of the second tab, "Update Data", which is where the user can add a row to the overall data table with their personal salary information. The user populates every field in the side panel (a summary box at the bottom reviews what the user is about to enter), and then clicks on "Add Data" to update the data table. This update gets applied to our MySQL database. The user should reload the app for the plots in the other tabs to be updated with the new data.
 
 ![app-tab3a](https://github.com/adtgroup8/project/assets/137223955/16944ac6-593a-416c-8e2c-d4bc0b227e85)
-Above is an image of the third tab, "Career Growth. Initially, the space where the plot is is empty, but once a user populates the fields in the side panel and clicks on "Whats My Worth!", a graph appears that plots the median salaries of jobs in the data table that meet the input critera. These are median salaries with respect to experience level, which provides the user with information on career progression. This tab also outputs filtered job titles based on user inputs. If you scroll down on this tab, there is a second table (imaged below) that outputs the filtered subset of the overall data table including all attributes.
+Above is an image of the third tab, "Career Growth. Initially, the space where the plot is is empty, but once a user populates the fields in the side panel and clicks on "Whats My Worth!", a graph appears that plots the median salaries of jobs in the data table that meet the input critera. These are median salaries with respect to experience level, which provides the user with information on career progression. This tab also outputs filtered job titles based on user inputs. If you scroll down on this tab, there is a second table (imaged below) that outputs the filtered subset of the overall data table showing all attributes.
 
 ![app-tab3b](https://github.com/adtgroup8/project/assets/137223955/65efb9c7-5e5a-4905-a8f5-7dfd7d4a240f)
