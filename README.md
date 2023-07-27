@@ -60,7 +60,7 @@ If one hovers their cursor over the "salaries_preprocessed" table in the schema 
 1. In the "Columns" tab, select "user_id" as the primary key (PK), and select "NN" (Not Null) for every attribute. Also, for each attribute, enter the same data type as what was assigned when creating the secondary tables (e.g., VARCHAR(50) below).
 ![mysql-1](https://github.com/adtgroup8/project/assets/137223955/6d8edfaa-b1a4-4bbc-adf7-d3afa86db77a)
 
-2. In the "Foreign Keys" tab, assign each foreign key to its reference table and reference column, like below.
+2. In the "Foreign Keys" tab, assign each foreign key to its reference table and reference column, like below, which uses "company_location" as an example.
 ![mysql-2](https://github.com/adtgroup8/project/assets/137223955/285e3122-5ac2-44b1-886f-f7dcc69de525)
 
 The rest of the script, except the last two queries, are various queries that we executed per the requirements for Part 2 of this project.
