@@ -71,7 +71,7 @@ The last two queries extract the last row of the overall "salaries_preprocessed"
 ## Shiny App Development
 The code file labelled "WhatsMyWorth_V4.R" is the R code for our WhatsMyWorth Shiny app. Our app connects to the MySQL database via a local server.
 
-One can run the app by opening this file in RStudio. Our app contains three tabs, whose functionalities and operations are explained in our technical report. Below are some screenshots of WhatsMyWorth.
+One can run the app via RStudio. Our app contains three tabs, whose functionalities and operations are explained in our technical report. Below are some screenshots of WhatsMyWorth.
 
 ![app-tab1](https://github.com/adtgroup8/project/assets/137223955/f2a9dff6-3afe-4da4-b1d0-2410a47d7a28)
 Above is an image of the first tab, "Salary Insights". The app filters the dataset per the user inputs on the left, and it outputs the text and visuals on the right. The text at the top lists the job titles that are filtered based on the selected job field. The first plot contains two box plots of salaries that compare jobs based in North America and those that are not. The second plot contain salary box plots based on company size. The third plot are scatter plots of salaries based on experience level. All plots take into account relevant user inputs (for example, the second plot would not consider the company size selected by the user).
